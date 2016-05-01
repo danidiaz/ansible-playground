@@ -1,0 +1,24 @@
+version: '2'
+services:
+  box:
+    hostname: ansible-playground
+    ports:
+        - "2222:22"
+    image: nodeimage
+    links: 
+        - slave1
+        - slave2
+        - slave3
+        - slave4
+  slave1:
+    hostname: slave1
+    image: nodeimage
+  slave2:
+    hostname: slave2
+    image: nodeimage
+  slave3:
+    hostname: slave3
+    image: nodeimage
+  slave4:
+    hostname: slave5
+    image: nodeimage
